@@ -1,0 +1,101 @@
+---
+file: service-areas.html
+nav: service-areas
+canonical: /service-areas
+crumb: Service Areas
+title: HVAC Service Areas | Philadelphia, PA | Philadelphia Gas &amp; Electric
+description: Philadelphia Gas &amp; Electric serves Philadelphia, Pennsylvania and its suburbs from its main office at 4512 Paul Street. Not sure if we serve your address? Call (215) 743-0500.
+---
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Service Areas</span></nav>
+    <div class="page-hero-grid page-hero-grid--photo">
+      <div>
+        <h1 id="page-title">Proud to Serve Philadelphia</h1>
+        <p class="lead">Dependable heating and cooling service for Philadelphia, Pennsylvania and its suburbs, from our main office at 4512 Paul Street. Family-owned since 1955.</p>
+        <div class="btn-row">
+          {{sched|Schedule Service|}}
+          {{call|btn--ink|}}
+        </div>
+      </div>
+      <figure class="photo">
+        <div class="photo-frame" style="aspect-ratio:3/2"><img src="assets/img/van-owner.webp" width="1200" height="801" alt="Owner Mike standing in front of the company van on a residential street" fetchpriority="high"></div>
+        <figcaption><span class="plate">Mike and the company van · photo from pgecomfort.com</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Check your address ===== -->
+<section class="section" aria-labelledby="check-title">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Not sure?</span>
+      <h2 id="check-title">Not sure if we serve your address?</h2>
+      <p class="lead">The quickest way to find out is to ask. Call the team or send an email with your street and neighborhood, and they'll tell you whether they can help.</p>
+      <div class="btn-row">
+        {{call|btn--ink|}}
+        {{mail|btn--outline|}}
+      </div>
+      <p class="muted small" style="margin-top:var(--s4)">Office hours listed on pgecomfort.com: Mon to Fri 8 AM to 6 PM, Sat 9 AM to 5 PM, Sun closed.</p>
+    </div>
+
+    <div class="office">
+      <span class="muted small">Main office</span>
+      <address>
+        <span class="name">Philadelphia Gas &amp; Electric</span><br>
+        4512 Paul Street<br>
+        Philadelphia, PA 19124
+      </address>
+      <ul class="footer-list" style="color:var(--text)">
+        <li><a class="link" href="tel:2157430500" data-phone>{{icon|phone}} (215) 743-0500</a></li>
+        <li><a class="link" href="mailto:info@pgecomfort.com" data-email>{{icon|mail}} info@pgecomfort.com</a></li>
+      </ul>
+      <p class="muted small" style="margin:var(--s4) 0 0">Address as listed on the current website. Please call ahead rather than visiting without an appointment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Context ===== -->
+<section class="section section--surface" aria-labelledby="ctx-title">
+  <div class="container svc-layout">
+    <div class="sticky">
+      <span class="eyebrow">Local knowledge</span>
+      <h2 id="ctx-title">Honest HVAC care for Philadelphia homes</h2>
+      <p class="lead">For three generations, our family has provided honest, dependable HVAC service to Philadelphia and its suburbs.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><h3>Upfront pricing</h3><p>From routine tune-ups to major repairs, you'll always know the price upfront.</p></div>
+      <div class="fact"><h3>Older homes</h3><p>Many older Philadelphia homes were never built with ductwork in mind. That's one reason the team offers <a href="services.html#mini-splits">ductless mini-split systems</a> alongside <a href="services.html#heating">heating</a> and <a href="services.html#cooling">cooling</a> service.</p></div>
+      <div class="fact"><h3>One team, one number</h3><p>Questions about coverage, scheduling or an existing system all start with a call to <a href="tel:2157430500" data-phone>(215) 743-0500</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Verified areas (data driven) ===== -->
+<section class="section" aria-labelledby="areas-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Coverage</span>
+      <h2 id="areas-title">Confirmed neighborhoods and suburbs</h2>
+      <p class="lead">This list shows only locations the client has explicitly confirmed. Nothing is listed until it is verified.</p>
+    </div>
+    <ul class="area-list" data-area-list hidden></ul>
+    <div class="placeholder-box" data-area-empty>
+      <strong>Pending client confirmation.</strong> The current website describes the service area as “Philadelphia and its suburbs” without a published neighborhood list, so none is shown here. Once confirmed, add the names to <code>VERIFIED_SERVICE_AREAS</code> in <code>assets/js/config.js</code> and they will appear on this page automatically.
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container cta-grid">
+    <div>
+      <h2 id="cta-title">Ready to confirm service at your address?</h2>
+      <p>Schedule service, call, or email the team. You can also browse <a href="services.html">all services</a> first.</p>
+    </div>
+    <div class="btn-row">
+      {{sched|Schedule Service|}}
+      {{call|btn--ink|}}
+    </div>
+  </div>
+</section>

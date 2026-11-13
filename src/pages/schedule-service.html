@@ -1,0 +1,161 @@
+---
+file: schedule-service.html
+nav: schedule
+canonical: /schedule-service
+crumb: Schedule Service
+title: Schedule Service | Philadelphia Gas &amp; Electric
+description: Schedule heating or cooling service with Philadelphia Gas &amp; Electric online, call (215) 743-0500, or email info@pgecomfort.com.
+---
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Schedule Service</span></nav>
+    <h1 id="page-title">Schedule Service</h1>
+    <p class="lead" style="margin:0">Choose a time in the scheduling calendar, or call the team and talk it through. Prefer to send a message first? There's a separate inquiry option below.</p>
+  </div>
+</section>
+
+<section class="section--tight" aria-label="Booking notice" style="padding-bottom:0">
+  <div class="container">
+    <!-- Demo disclosure (hidden automatically when BOOKING_MODE = "client") -->
+    <div class="callout callout--demo" data-demo-only role="note">
+      {{icon|alert}}
+      <div>
+        <h2>Prototype scheduling demonstration</h2>
+        <p>Appointments are not confirmed with Philadelphia Gas &amp; Electric through this demo. The calendar below is an Oculeus demonstration calendar, used because no client-owned booking link has been verified. To reach the team today, call <a href="tel:2157430500" data-phone>(215) 743-0500</a>.</p>
+      </div>
+    </div>
+    <!-- Client-mode copy (shown only after BOOKING_MODE = "client"); replace with client-approved text -->
+    <div class="callout" data-client-only hidden>
+      {{icon|info}}
+      <div>
+        <h2>Scheduling with Philadelphia Gas &amp; Electric</h2>
+        <p>[Client-approved booking text goes here.] Your appointment is confirmed by the scheduling provider or directly by the team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:var(--s8)" aria-label="Ways to schedule">
+  <div class="container schedule-grid">
+    <!-- PRIMARY ACTION -->
+    <div class="book-card">
+      <span class="plate">Primary action</span>
+      <h2>Online appointment scheduling</h2>
+      <p>Open the scheduling calendar to pick a date and time for heating, cooling or air-quality service. The booking page opens in a new tab.</p>
+      <div class="btn-row">
+        {{sched|Open Scheduling Calendar|}}
+        <button class="btn btn--outline" type="button" data-embed-btn aria-expanded="false" aria-controls="embed-shell" hidden>Preview calendar on this page</button>
+      </div>
+      <div class="embed-shell" id="embed-shell" data-embed-shell aria-live="polite" hidden>
+        <p class="embed-empty">Calendar preview not loaded.</p>
+      </div>
+      <p class="muted small" style="margin:var(--s4) 0 0"><strong>Direct-link fallback:</strong> the button above always works on its own, even if scripts or embeds are blocked by your browser or network.</p>
+      <noscript><p class="muted small">JavaScript is turned off, so the on-page preview is unavailable. Use “Open Scheduling Calendar” above.</p></noscript>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="grid" style="display:grid;gap:var(--s4)">
+      <div class="contact-card">
+        <span class="muted small">Prefer to talk?</span>
+        <h2>Call the team</h2>
+        <a class="big-phone" href="tel:2157430500" data-phone>(215) 743-0500</a>
+        <p style="margin:0">Or email <a href="mailto:info@pgecomfort.com" data-email style="font-weight:500">info@pgecomfort.com</a></p>
+        <dl class="hours" style="color:var(--text-2);margin-top:var(--s2)">
+          <dt style="color:var(--text);font-weight:500">Mon to Fri</dt><dd>8:00 AM to 6:00 PM</dd>
+          <dt style="color:var(--text);font-weight:500">Saturday</dt><dd>9:00 AM to 5:00 PM</dd>
+          <dt style="color:var(--text);font-weight:500">Sunday</dt><dd>Closed</dd>
+        </dl>
+        <p class="muted small" style="margin:0">Hours as listed on pgecomfort.com. Confirm before launch.</p>
+        {{call|btn--ink btn--block|}}
+      </div>
+
+      <div class="side-card">
+        <h3>Prefer to send an inquiry?</h3>
+        <p>Use the company's existing contact form to send a message or request. This is an inquiry, <strong>not</strong> a calendar booking, and it does not confirm an appointment.</p>
+        {{contact|btn--outline|Open the contact form}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What happens next ===== -->
+<section class="section section--raised" aria-labelledby="next-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What happens next</span>
+      <h2 id="next-title">From request to confirmation</h2>
+      <p class="lead">Final scheduling and confirmation happen only through the linked booking provider or directly with the team.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="plate">1</span><h3>Choose a time or call</h3><p>Pick a slot in the scheduling calendar, or call the team to arrange a visit.</p></li>
+      <li class="step"><span class="plate">2</span><h3>Receive confirmation</h3><p>Confirmation comes from the booking provider or directly from the team. Nothing on this page confirms an appointment by itself.</p></li>
+      <li class="step"><span class="plate">3</span><h3>The team follows up</h3><p>The team confirms details with you before the visit.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Optional form mockup ===== -->
+<section class="section" aria-labelledby="form-title">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Optional</span>
+      <h2 id="form-title">Quick inquiry form preview</h2>
+      <p class="lead">A short-form layout for a future on-site inquiry. It demonstrates labels, validation and success states.</p>
+      <div class="callout callout--demo">
+        {{icon|lock}}
+        <div>
+          <h3>Optional, backend integration required</h3>
+          <p>This form does not send anything. It cannot reach Philadelphia Gas &amp; Electric until a backend and a consent and privacy flow are connected. Use the phone, email or the existing contact form instead.</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="form-card" data-demo-form novalidate aria-labelledby="form-title">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--s3);margin-bottom:var(--s4)">
+        <h3 style="margin:0">Send a message</h3>
+        <span class="plate">Sandbox · not connected</span>
+      </div>
+      <div class="form-grid form-grid--2">
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+          <span class="error" id="f-name-err" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="f-contact">Email or phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-contact" name="contact" type="text" autocomplete="email" required aria-describedby="f-contact-hint f-contact-err">
+          <span class="hint" id="f-contact-hint">How should the team reach you?</span>
+          <span class="error" id="f-contact-err" role="alert"></span>
+        </div>
+        <div class="field span-2">
+          <label for="f-request">What do you need? <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-request" name="request" required aria-describedby="f-request-err"></textarea>
+          <span class="error" id="f-request-err" role="alert"></span>
+        </div>
+        <div class="field span-2">
+          <div class="check-field">
+            <input id="f-consent" name="consent" type="checkbox" required aria-describedby="f-consent-err">
+            <label for="f-consent">I agree to be contacted about this request. <span class="muted">(Consent wording and privacy link pending client content.)</span></label>
+          </div>
+          <span class="error" id="f-consent-err" role="alert"></span>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:var(--s4)">
+        <button class="btn btn--ink" type="submit"><span>Preview submit</span>{{icon|send}}</button>
+      </div>
+      <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:0;padding-bottom:var(--s16)">
+  <div class="container">
+    <div class="callout">
+      {{icon|alert}}
+      <div>
+        <h3>Smell gas or suspect a leak?</h3>
+        <p>Leave the building immediately and call 911 from outside. Do not use this website to report an emergency.</p>
+      </div>
+    </div>
+  </div>
+</section>
