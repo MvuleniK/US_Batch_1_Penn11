@@ -1,0 +1,3 @@
+# Demonstration domain — not for indexing until the client approves launch.
+User-agent: *
+Disallow: /
