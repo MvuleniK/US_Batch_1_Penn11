@@ -9,19 +9,18 @@ description: Heating and cooling support for Philadelphia homes — heating repa
 <section class="page-hero" aria-labelledby="page-title">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Services</span></nav>
-    <div class="page-hero-grid split--wide-left">
+    <div class="page-hero-grid page-hero-grid--photo">
       <div>
-        <span class="eyebrow">Our services</span>
         <h1 id="page-title">Heating &amp; Cooling Support for Philadelphia Homes</h1>
         <p class="lead">Find the service you need, see what to expect, and take the next step: schedule online or call the team. Every repair and installation starts with honest diagnostics and an upfront price.</p>
-        <div class="btn-row" style="margin-top:var(--s4)">
-          {{sched|Schedule Service|btn--lg}}
-          {{call|btn--ghost-light btn--lg}}
+        <div class="btn-row">
+          {{sched|Schedule Service|}}
+          {{call|btn--ink|}}
         </div>
       </div>
-      <figure class="photo" style="box-shadow:none;background:transparent">
-        <img src="assets/img/basement-heating.webp" width="1200" height="654" alt="Wall-hung boiler with copper piping in a brick basement" style="border-radius:var(--r-lg);aspect-ratio:16/10;object-fit:cover">
-        <figcaption style="background:transparent;color:#9fb2bf;padding-inline:0">Illustrative design image</figcaption>
+      <figure class="photo">
+        <div class="photo-frame" style="aspect-ratio:3/2"><img src="assets/img/technician-heating-analysis.webp" width="1200" height="801" alt="Technician testing a heating system with a handheld meter" fetchpriority="high"></div>
+        <figcaption><span class="plate">Luke testing a heating system · photo from pgecomfort.com</span></figcaption>
       </figure>
     </div>
   </div>
@@ -43,12 +42,12 @@ description: Heating and cooling support for Philadelphia homes — heating repa
   </div>
 </div>
 
-<section class="section--tight" style="padding-top:var(--s5)">
+<section class="section--tight">
   <div class="container">
     <div class="callout callout--demo">
       {{icon|info}}
       <div>
-        <h3>Scheduling a visit vs. asking a question</h3>
+        <h3>Scheduling a visit or asking a question</h3>
         <p>“Schedule Service” opens the scheduling calendar to book an appointment. If you'd rather describe your situation first, call <a href="tel:2157430500" data-phone>(215) 743-0500</a> or use the existing <a href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer">inquiry form</a>. An inquiry is a message, not a confirmed appointment.</p>
       </div>
     </div>
@@ -66,7 +65,7 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       <p>A new heating system is a major investment, and our team makes sure the installation is done right the first time: removing the old unit, fitting the new one, and confirming every connection works exactly as it should.</p>
       <h3>Heating repair</h3>
       <p>A broken heating system can't wait, especially in the middle of winter. Our team diagnoses the real issue first, so you're never paying for guesswork or unnecessary parts.</p>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Furnace services</span></li>
         <li>{{icon|check}}<span>Boiler services</span></li>
         <li>{{icon|check}}<span>Heat pump services</span></li>
@@ -74,12 +73,12 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       </ul>
       <div class="btn-row">
         {{sched|Schedule Service}}
-        <a class="link-arrow" href="https://pgecomfort.com/services/heating-services/heating-repair-and-installation/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
+        <a class="link" href="https://pgecomfort.com/services/heating-services/heating-repair-and-installation/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
       </div>
     </div>
     <aside class="svc-aside" aria-label="Common reasons to get in touch about heating">
       <h3>Common reasons to get in touch</h3>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Strange noises from your furnace or boiler</span></li>
         <li>{{icon|check}}<span>Uneven heating between rooms</span></li>
         <li>{{icon|check}}<span>A sudden spike in your energy bill</span></li>
@@ -87,13 +86,13 @@ description: Heating and cooling support for Philadelphia homes — heating repa
         <li>{{icon|check}}<span>A system that has stopped working altogether</span></li>
       </ul>
       <p class="fine-print">Educational list only — not a diagnosis. Call the team if you're unsure.</p>
-      {{call|btn--navy btn--block}}
+      {{call|btn--ink btn--block}}
     </aside>
   </div>
 </section>
 
 <!-- ===== Cooling ===== -->
-<section class="svc-block" id="cooling" aria-labelledby="cooling-title" style="background:var(--white)">
+<section class="svc-block" id="cooling" aria-labelledby="cooling-title">
   <div class="container svc-grid">
     <div>
       <span class="eyebrow">Cooling</span>
@@ -103,26 +102,26 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       <p>We handle the entire process: removing the old unit, fitting the new one, and confirming every connection works exactly as it should.</p>
       <h3>Air conditioning repair</h3>
       <p>Whether it's warm air, a strange noise, or a system that has stopped altogether, the team identifies the actual issue first, so you're never paying for guesswork or parts you don't need.</p>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Central A/C services</span></li>
         <li>{{icon|check}}<span>Ductless mini-split systems</span></li>
         <li>{{icon|check}}<span>A/C maintenance &amp; tune-ups</span></li>
       </ul>
       <div class="btn-row">
         {{sched|Schedule Service}}
-        <a class="link-arrow" href="https://pgecomfort.com/services/air-conditioning-repair-and-installation-services/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
+        <a class="link" href="https://pgecomfort.com/services/air-conditioning-repair-and-installation-services/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
       </div>
     </div>
     <aside class="svc-aside" aria-label="Common reasons to get in touch about cooling">
       <h3>Common reasons to get in touch</h3>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>A system blowing warm air</span></li>
         <li>{{icon|check}}<span>Short cycling</span></li>
         <li>{{icon|check}}<span>A strange noise</span></li>
         <li>{{icon|check}}<span>Time for a new install</span></li>
       </ul>
       <p class="fine-print">Educational list only — not a diagnosis.</p>
-      {{call|btn--navy btn--block}}
+      {{call|btn--ink btn--block}}
     </aside>
   </div>
 </section>
@@ -138,23 +137,23 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       <p>Not every home needs the same solution. Some need better filtration for dust and allergens; others need UV or purification systems for odors and airborne contaminants. The team evaluates your home's specific air quality issues before recommending equipment.</p>
       <div class="btn-row">
         {{sched|Schedule Service}}
-        <a class="link-arrow" href="https://pgecomfort.com/services/indoor-air-quality-solutions/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
+        <a class="link" href="https://pgecomfort.com/services/indoor-air-quality-solutions/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
       </div>
     </div>
     <aside class="svc-aside" aria-label="What indoor air quality service helps with">
       <h3>What this service helps with</h3>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Dust and allergen filtration</span></li>
         <li>{{icon|check}}<span>UV and purification systems</span></li>
         <li>{{icon|check}}<span>Ventilation solutions</span></li>
       </ul>
-      {{call|btn--navy btn--block}}
+      {{call|btn--ink btn--block}}
     </aside>
   </div>
 </section>
 
 <!-- ===== Mini-splits ===== -->
-<section class="svc-block" id="mini-splits" aria-labelledby="mini-title" style="background:var(--white)">
+<section class="svc-block" id="mini-splits" aria-labelledby="mini-title">
   <div class="container svc-grid">
     <div>
       <span class="eyebrow">Ductless</span>
@@ -166,17 +165,17 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       <p>Problems usually show up as a unit blowing warm air, one zone that has stopped cooling, or a system that leaks or drips. The team tests for the actual cause instead of guessing.</p>
       <div class="btn-row">
         {{sched|Schedule Service}}
-        <a class="link-arrow" href="https://pgecomfort.com/services/ductless-mini-split-systems/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
+        <a class="link" href="https://pgecomfort.com/services/ductless-mini-split-systems/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
       </div>
     </div>
     <aside class="svc-aside" aria-label="What mini-split service helps with">
       <h3>What this service helps with</h3>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Room-specific sizing</span></li>
         <li>{{icon|check}}<span>Multi-zone options</span></li>
         <li>{{icon|check}}<span>Heating and cooling where ductwork can't reach</span></li>
       </ul>
-      {{call|btn--navy btn--block}}
+      {{call|btn--ink btn--block}}
     </aside>
   </div>
 </section>
@@ -194,60 +193,60 @@ description: Heating and cooling support for Philadelphia homes — heating repa
       <p>Symptoms like dry skin, static shocks and cracking woodwork often get blamed on the season instead of the equipment. The team identifies the actual issue first: a clogged water panel, a faulty valve, or a unit that has stopped producing moisture.</p>
       <div class="btn-row">
         {{sched|Schedule Service}}
-        <a class="link-arrow" href="https://pgecomfort.com/services/humidifiers-dehumidifiers/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
+        <a class="link" href="https://pgecomfort.com/services/humidifiers-dehumidifiers/" target="_blank" rel="noopener noreferrer">Current website page {{icon|external}}</a>
       </div>
     </div>
     <aside class="svc-aside" aria-label="Common reasons to get in touch about humidity">
       <h3>Common reasons to get in touch</h3>
-      <ul class="check-list">
+      <ul class="checks">
         <li>{{icon|check}}<span>Dry skin and static shocks in winter</span></li>
         <li>{{icon|check}}<span>Cracking woodwork</span></li>
         <li>{{icon|check}}<span>Damp or musty air in summer or basements</span></li>
         <li>{{icon|check}}<span>A humidifier that has stopped working</span></li>
       </ul>
       <p class="fine-print">Educational list only — not a diagnosis.</p>
-      {{call|btn--navy btn--block}}
+      {{call|btn--ink btn--block}}
     </aside>
   </div>
 </section>
 
 <!-- ===== Plan ===== -->
-<section class="section section--mist" id="plan" aria-labelledby="plan-title">
+<section class="section section--raised" id="plan" aria-labelledby="plan-title">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Maintenance &amp; tune-ups</span>
+      <span class="eyebrow">Maintenance and tune-ups</span>
       <h2 id="plan-title">Stay ahead of breakdowns</h2>
     </div>
     <div class="plan">
       <div>
         <h3>The Home Comfort Plan</h3>
         <p>Breakdowns rarely happen at a convenient time. For less than a dollar a day, members get ahead of them with annual tune-ups, priority repair response, and discounted service calls, so small issues get caught before they become expensive ones.</p>
-        <ul class="check-list" style="color:#d6e0e7">
+        <ul class="checks">
           <li>{{icon|check}}<span>Annual tune-ups for A/C &amp; heating</span></li>
           <li>{{icon|check}}<span>Member-only pricing on service calls</span></li>
-          <li>{{icon|check}}<span>24-hour priority repair response (member benefit, as listed on current site)</span></li>
+          <li>{{icon|check}}<span>24-hour priority repair response (member benefit, as listed on the current site)</span></li>
           <li>{{icon|check}}<span>Complete system inspection</span></li>
-          <li>{{icon|check}}<span>Referral &amp; loyalty perks</span></li>
+          <li>{{icon|check}}<span>Referral and loyalty perks</span></li>
         </ul>
         <div class="btn-row">
-          <a class="btn btn--light" href="https://pgecomfort.com/home-comfort-maintenance-care-plan/" target="_blank" rel="noopener noreferrer"><span>View plan on current site</span>{{icon|external}}</a>
-          {{call|btn--ghost-light}}
+          <a class="btn btn--outline" href="https://pgecomfort.com/home-comfort-maintenance-care-plan/" target="_blank" rel="noopener noreferrer"><span>View plan on current site</span>{{icon|external}}</a>
+          {{call|btn--ink|}}
         </div>
       </div>
-      <div class="plan-price">$25<small>per month · plan pricing as published on pgecomfort.com</small></div>
+      <div class="plan-price">$25<small>per month, as published on pgecomfort.com</small></div>
     </div>
-    <div class="offer-grid" style="margin-top:var(--s4);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-      <article class="offer"><span class="offer-kicker">Affordable tune-ups</span><h3>$99 Seasonal Tune-Up</h3><div class="offer-body"><p>A full heating or A/C tune-up for $99, as listed on the current Specials &amp; Deals page.</p></div>{{sched|Schedule Service|btn--sm}}</article>
-      <article class="offer"><span class="offer-kicker">Financing</span><h3>0% for 12 months on qualifying systems</h3><div class="offer-body"><p>Subject to credit approval; new system installations only, not service calls or maintenance contracts.</p></div><a class="link-arrow" href="tel:2157430500" data-phone>Ask about financing {{icon|arrow-right}}</a></article>
+    <div class="offers" style="margin-top:var(--s4);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <article class="offer"><span class="muted small">Affordable tune-ups</span><div class="fig">$99</div><h3>Seasonal heating or A/C tune-up</h3><p>As listed on the current Specials &amp; Deals page.</p><a class="link" data-booking href="{{BOOKING_URL}}" target="_blank" rel="noopener noreferrer">Schedule Service {{icon|arrow-right}}</a></article>
+      <article class="offer"><span class="muted small">Financing</span><div class="fig">0%</div><h3>Financing for 12 months on qualifying systems</h3><p>Subject to credit approval; new system installations only, not service calls or maintenance contracts.</p><a class="link" href="tel:2157430500" data-phone>Ask about financing {{icon|arrow-right}}</a></article>
     </div>
-    <div class="provenance" role="note">{{icon|info}}<p style="margin:0"><strong>Source &amp; status:</strong> plan, tune-up and financing details are reproduced from pgecomfort.com (captured 13 Nov 2026) and must be confirmed by the client as current before launch.</p></div>
+    <div class="source" role="note">{{icon|info}}<p><strong>Source and status.</strong> Plan, tune-up and financing details are reproduced from pgecomfort.com (captured 13 Nov 2026). The client must confirm they are current before launch.</p></div>
   </div>
 </section>
 
 <!-- ===== FAQ ===== -->
 <section class="section" id="faq" aria-labelledby="faq-title">
   <div class="container">
-    <div class="section-head section-head--center">
+    <div class="section-head">
       <span class="eyebrow">Good to know</span>
       <h2 id="faq-title">Frequently asked questions</h2>
       <p class="lead">Answers adapted from the company's current service pages.</p>
@@ -278,12 +277,14 @@ description: Heating and cooling support for Philadelphia homes — heating repa
 </section>
 
 <section class="cta-band" aria-labelledby="cta-title">
-  <div class="container">
-    <h2 id="cta-title">Need heating or cooling help in Philadelphia?</h2>
-    <p class="lead">Choose a time that works, or call and talk it through with the team.</p>
+  <div class="container cta-grid">
+    <div>
+      <h2 id="cta-title">Need heating or cooling help in Philadelphia?</h2>
+      <p>Choose a time that works, or call and talk it through with the team.</p>
+    </div>
     <div class="btn-row">
-      {{sched|Schedule Service|btn--lg}}
-      {{call|btn--light btn--lg}}
+      {{sched|Schedule Service|}}
+      {{call|btn--ink|}}
     </div>
   </div>
 </section>
