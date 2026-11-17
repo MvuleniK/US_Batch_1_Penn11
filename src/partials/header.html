@@ -1,0 +1,60 @@
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="demo-bar" data-demo-only role="note" aria-label="Prototype notice">
+  <div class="container">
+    <strong>Prototype</strong>
+    <span>Demo preview — the booking calendar is an Oculeus demo, not a confirmed Philadelphia Gas &amp; Electric scheduler.</span>
+    <code>BOOKING_MODE = "<span data-booking-mode-text>demo</span>"</code>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Philadelphia Gas &amp; Electric — home">
+      {{brandmark}}
+      <span class="brand-text">
+        <span class="brand-name">Philadelphia Gas &amp; Electric</span>
+        <span class="brand-tag">Family-owned since 1955</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html"{{aria:home}}>Home</a></li>
+        <li><a href="services.html"{{aria:services}}>Services</a></li>
+        <li><a href="service-areas.html"{{aria:service-areas}}>Service Areas</a></li>
+        <li><a href="reviews.html"{{aria:reviews}}>Reviews</a></li>
+        <li><a href="schedule-service.html"{{aria:schedule}}>Schedule / Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:2157430500" data-phone aria-label="Call (215) 743-0500">
+        <small>Call us</small>
+        <span>(215) 743-0500</span>
+      </a>
+      <a class="icon-btn icon-btn--call" href="tel:2157430500" data-phone aria-label="Call (215) 743-0500">{{icon|phone}}</a>
+      {{sched|Schedule Service|header-cta btn--sm}}
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="icon-open">{{icon|menu}}</span><span class="icon-close">{{icon|x}}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="drawer" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="index.html"{{aria:home}}>Home {{icon|arrow-right}}</a></li>
+        <li><a href="services.html"{{aria:services}}>Services {{icon|arrow-right}}</a></li>
+        <li><a href="service-areas.html"{{aria:service-areas}}>Service Areas {{icon|arrow-right}}</a></li>
+        <li><a href="reviews.html"{{aria:reviews}}>Reviews {{icon|arrow-right}}</a></li>
+        <li><a href="schedule-service.html"{{aria:schedule}}>Schedule / Contact {{icon|arrow-right}}</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-actions">
+      {{sched|Schedule Service|btn--lg btn--block}}
+      {{call|btn--navy btn--lg btn--block}}
+    </div>
+    <p class="drawer-meta">Prefer email? <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a></p>
+  </div>
+</header>
