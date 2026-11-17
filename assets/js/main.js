@@ -123,7 +123,7 @@
     btn.addEventListener("click", function () {
       if ($("iframe", shell)) {
         shell.innerHTML = '<p class="embed-empty">Calendar preview closed.</p>';
-        btn.textContent = "Preview calendar on this page";
+        btn.textContent = "Preview calendar";
         btn.setAttribute("aria-expanded", "false");
         return;
       }
@@ -137,7 +137,7 @@
       note.className = "embed-empty";
       note.textContent = "If the calendar does not appear (blocked embeds, script blockers, or a corporate firewall), use the “Open Scheduling Calendar” button above — it opens the same calendar directly.";
       shell.appendChild(note);
-      btn.textContent = "Close calendar preview";
+      btn.textContent = "Close preview";
       btn.setAttribute("aria-expanded", "true");
     });
   }

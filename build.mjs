@@ -152,6 +152,37 @@ function render(tpl, ctx) {
   return out;
 }
 
+/* ---- typographic quotes in text nodes only (never attributes, scripts or styles) ---- */
+function smarten(html) {
+  const SKIP = new Set(["script", "style", "code", "pre", "textarea", "title"]);
+  const INLINE = new Set(["span", "a", "strong", "em", "b", "i", "small", "abbr", "mark"]);
+  let skip = null;
+  let prev = ""; // previous tag, e.g. "</span>"
+  return html
+    .split(/(<[^>]+>)/)
+    .map((seg) => {
+      if (seg.startsWith("<")) {
+        const m = seg.match(/^<\/?\s*([a-zA-Z0-9]+)/);
+        if (m) {
+          const name = m[1].toLowerCase();
+          if (seg.startsWith("</")) { if (skip === name) skip = null; }
+          else if (SKIP.has(name) && !seg.endsWith("/>")) skip = name;
+          prev = seg.startsWith("</") && INLINE.has(name) ? "close-inline" : "other";
+        }
+        return seg;
+      }
+      if (skip) return seg;
+      let out = seg;
+      // a quote at the very start of a text run closes if an inline element just ended
+      if (out.startsWith('"') && prev === "close-inline") out = "”" + out.slice(1);
+      return out
+        .replace(/(^|[\s(\[—])"/g, "$1“")
+        .replace(/"/g, "”")
+        .replace(/'/g, "’");
+    })
+    .join("");
+}
+
 const pages = readdirSync(join(root, "src/pages")).filter((f) => f.endsWith(".html")).sort();
 const shell = read("src/partials/shell.html");
 let count = 0;
@@ -167,7 +198,7 @@ for (const f of pages) {
   const body = render(m[2], ctx);
   const html = render(shell, { ...ctx, body, sprite });
   // body must be injected after rendering to avoid double-processing
-  writeFileSync(join(root, ctx.file), html.replace("<!--BODY-->", body).replace("<!--SPRITE-->", sprite).replace("<!--JSONLD-->", jsonLd(ctx)));
+  writeFileSync(join(root, ctx.file), smarten(html.replace("<!--BODY-->", body).replace("<!--SPRITE-->", sprite).replace("<!--JSONLD-->", jsonLd(ctx))));
   console.log("built", ctx.file);
   count++;
 }

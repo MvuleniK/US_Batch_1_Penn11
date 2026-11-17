@@ -26,9 +26,9 @@
 
 <div class="demo-bar" data-demo-only role="note" aria-label="Prototype notice">
   <div class="container">
-    <span class="plate">Prototype</span>
+    <strong>Prototype</strong>
     <span>Demo preview. The booking calendar is an Oculeus demo, not a confirmed Philadelphia Gas &amp; Electric scheduler.</span>
-    <span class="plate mode">BOOKING_MODE = "<span data-booking-mode-text>demo</span>"</span>
+    <span class="mode">BOOKING_MODE = “<span data-booking-mode-text>demo</span>”</span>
   </div>
 </div>
 
@@ -61,130 +61,119 @@
   <div class="drawer" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
       <ul>
-        <li><a href="index.html">Home <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="services.html">Services <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="service-areas.html" aria-current="page">Service Areas <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="reviews.html">Reviews <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="schedule-service.html">Schedule / Contact <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="service-areas.html" aria-current="page">Service Areas</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="schedule-service.html">Schedule / Contact</a></li>
       </ul>
     </nav>
     <div class="drawer-actions">
       <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
-      <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
+      <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
     </div>
     <p class="drawer-meta">Prefer email? <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a></p>
   </div>
 </header>
 
 <main id="main">
-<section class="page-hero" aria-labelledby="page-title">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Service Areas</span></nav>
-    <div class="page-hero-grid page-hero-grid--photo">
-      <div>
-        <h1 id="page-title">Proud to Serve Philadelphia</h1>
-        <p class="lead">Dependable heating and cooling service for Philadelphia, Pennsylvania and its suburbs, from our main office at 4512 Paul Street. Family-owned since 1955.</p>
-        <div class="btn-row">
-          <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
-          <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
-        </div>
+<!-- ============ HERO: Stage ============ -->
+<section class="hero" aria-labelledby="page-title">
+  <div class="container stage">
+    <div class="stage-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Service Areas</span></nav>
+      <h1 id="page-title">Proud to Serve Philadelphia</h1>
+      <p class="lead">Dependable heating and cooling service for Philadelphia, Pennsylvania and its suburbs.</p>
+      <div class="actions">
+        <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
+        <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
       </div>
-      <figure class="photo">
-        <div class="photo-frame" style="aspect-ratio:3/2"><img src="assets/img/van-owner.webp" width="1200" height="801" alt="Owner Mike standing in front of the company van on a residential street" fetchpriority="high"></div>
-        <figcaption><span class="plate">Mike and the company van · photo from pgecomfort.com</span></figcaption>
-      </figure>
     </div>
+    <figure class="stage-photo">
+      <div class="frame"><img src="assets/img/van-owner.webp" width="1200" height="801" alt="Owner Mike standing in front of the company van on a residential street" fetchpriority="high"></div>
+      <figcaption>Mike and the company van. Photo from pgecomfort.com.</figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ===== Check your address ===== -->
-<section class="section" aria-labelledby="check-title">
+<!-- ============ CHECK YOUR ADDRESS ============ -->
+<section class="section section--m" aria-labelledby="check-title">
   <div class="container split">
-    <div>
-      <span class="eyebrow">Not sure?</span>
+    <div class="split-copy">
       <h2 id="check-title">Not sure if we serve your address?</h2>
-      <p class="lead">The quickest way to find out is to ask. Call the team or send an email with your street and neighborhood, and they'll tell you whether they can help.</p>
-      <div class="btn-row">
-        <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
-        <a class="btn btn--outline" href="mailto:info@pgecomfort.com" data-email><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>info@pgecomfort.com</span></a>
+      <p class="lead">The quickest way to find out is to ask. Call the team or send an email with your street and neighborhood, and they’ll tell you whether they can help.</p>
+      <div class="actions">
+        <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
+        <a class="btn btn--line" href="mailto:info@pgecomfort.com" data-email><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>info@pgecomfort.com</span></a>
       </div>
-      <p class="muted small" style="margin-top:var(--s4)">Office hours listed on pgecomfort.com: Mon to Fri 8 AM to 6 PM, Sat 9 AM to 5 PM, Sun closed.</p>
+      <small>Office hours listed on pgecomfort.com: Mon to Fri 8 AM to 6 PM, Sat 9 AM to 5 PM, Sun closed.</small>
     </div>
-
     <div class="office">
-      <span class="muted small">Main office</span>
+      <small>Main office, family-owned since 1955</small>
       <address>
         <span class="name">Philadelphia Gas &amp; Electric</span><br>
         4512 Paul Street<br>
         Philadelphia, PA 19124
       </address>
-      <ul class="footer-list" style="color:var(--text)">
-        <li><a class="link" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> (215) 743-0500</a></li>
-        <li><a class="link" href="mailto:info@pgecomfort.com" data-email><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg> info@pgecomfort.com</a></li>
+      <ul class="footer-list">
+        <li><a class="link" href="tel:2157430500" data-phone>(215) 743-0500</a></li>
+        <li><a class="link" href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a></li>
       </ul>
-      <p class="muted small" style="margin:var(--s4) 0 0">Address as listed on the current website. Please call ahead rather than visiting without an appointment.</p>
+      <small>Address as listed on the current website. Please call ahead rather than visiting without an appointment.</small>
     </div>
   </div>
 </section>
 
-<!-- ===== Context ===== -->
-<section class="section section--surface" aria-labelledby="ctx-title">
-  <div class="container svc-layout">
-    <div class="sticky">
-      <span class="eyebrow">Local knowledge</span>
+<!-- ============ LOCAL KNOWLEDGE ============ -->
+<section class="section section--m band" aria-labelledby="ctx-title">
+  <div class="container rows--head">
+    <div class="head">
       <h2 id="ctx-title">Honest HVAC care for Philadelphia homes</h2>
       <p class="lead">For three generations, our family has provided honest, dependable HVAC service to Philadelphia and its suburbs.</p>
     </div>
     <div class="facts">
-      <div class="fact"><h3>Upfront pricing</h3><p>From routine tune-ups to major repairs, you'll always know the price upfront.</p></div>
-      <div class="fact"><h3>Older homes</h3><p>Many older Philadelphia homes were never built with ductwork in mind. That's one reason the team offers <a href="services.html#mini-splits">ductless mini-split systems</a> alongside <a href="services.html#heating">heating</a> and <a href="services.html#cooling">cooling</a> service.</p></div>
+      <div class="fact"><h3>Upfront pricing</h3><p>From routine tune-ups to major repairs, you’ll always know the price upfront.</p></div>
+      <div class="fact"><h3>Older homes</h3><p>Many older Philadelphia homes were never built with ductwork in mind. That’s one reason the team offers <a href="services.html#mini-splits">ductless mini-split systems</a> alongside <a href="services.html#heating">heating</a> and <a href="services.html#cooling">cooling</a> service.</p></div>
       <div class="fact"><h3>One team, one number</h3><p>Questions about coverage, scheduling or an existing system all start with a call to <a href="tel:2157430500" data-phone>(215) 743-0500</a>.</p></div>
+      <div class="fact" aria-labelledby="areas-title">
+        <h3 id="areas-title">Confirmed neighborhoods and suburbs</h3>
+        <p>This list shows only locations the client has explicitly confirmed. Nothing is listed until it is verified.</p>
+        <ul class="area-list" data-area-list hidden></ul>
+        <div class="placeholder-box" data-area-empty>
+          <strong>Pending client confirmation.</strong> The current website describes the service area as “Philadelphia and its suburbs” without a published neighborhood list, so none is shown here. Once confirmed, add the names to <code>VERIFIED_SERVICE_AREAS</code> in <code>assets/js/config.js</code> and they will appear on this page automatically.
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Verified areas (data driven) ===== -->
-<section class="section" aria-labelledby="areas-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Coverage</span>
-      <h2 id="areas-title">Confirmed neighborhoods and suburbs</h2>
-      <p class="lead">This list shows only locations the client has explicitly confirmed. Nothing is listed until it is verified.</p>
-    </div>
-    <ul class="area-list" data-area-list hidden></ul>
-    <div class="placeholder-box" data-area-empty>
-      <strong>Pending client confirmation.</strong> The current website describes the service area as “Philadelphia and its suburbs” without a published neighborhood list, so none is shown here. Once confirmed, add the names to <code>VERIFIED_SERVICE_AREAS</code> in <code>assets/js/config.js</code> and they will appear on this page automatically.
-    </div>
-  </div>
-</section>
-
-<section class="cta-band" aria-labelledby="cta-title">
-  <div class="container cta-grid">
-    <div>
+<!-- ============ CLOSE ============ -->
+<section class="section section--m band" aria-labelledby="cta-title">
+  <div class="container close">
+    <div class="close-copy">
       <h2 id="cta-title">Ready to confirm service at your address?</h2>
       <p>Schedule service, call, or email the team. You can also browse <a href="services.html">all services</a> first.</p>
     </div>
-    <div class="btn-row">
+    <div class="actions">
       <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
-      <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
+      <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
     </div>
   </div>
 </section>
 
 </main>
-<footer class="site-footer on-anchor">
+<footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
-        <span class="footer-mark">Philadelphia Gas &amp; Electric</span>
-        <p>Heating and cooling services for Philadelphia homes, backed by a family-owned tradition dating to 1955.</p>
-        <address class="footer-list">
-          <span style="color:var(--anchor-text)">4512 Paul Street, Philadelphia, PA 19124</span>
-          <a href="tel:2157430500" data-phone>(215) 743-0500</a>
-          <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a>
-        </address>
-      </div>
+    <div class="footer-mast">
+      <p class="mark">Philadelphia Gas &amp; Electric</p>
+      <address class="footer-list">
+        <span>4512 Paul Street, Philadelphia, PA 19124</span>
+        <a href="tel:2157430500" data-phone>(215) 743-0500</a>
+        <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a>
+      </address>
+    </div>
 
+    <div class="footer-cols">
       <div>
         <span class="footer-title">Navigate</span>
         <ul class="footer-list">
@@ -193,26 +182,33 @@
           <li><a href="service-areas.html">Service Areas</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="schedule-service.html">Schedule / Contact</a></li>
-          <li><a href="https://pgecomfort.com/" rel="noopener noreferrer" target="_blank">Current website <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a></li>
+          <li><a href="https://pgecomfort.com/" rel="noopener noreferrer" target="_blank">Current website</a></li>
         </ul>
       </div>
 
       <div>
         <span class="footer-title">Office hours</span>
-        <dl class="hours">
+        <dl class="footer-hours">
           <dt>Mon to Fri</dt><dd>8:00 AM to 6:00 PM</dd>
           <dt>Saturday</dt><dd>9:00 AM to 5:00 PM</dd>
           <dt>Sunday</dt><dd>Closed</dd>
         </dl>
-        <p class="small" style="margin-top:var(--s3)">As listed on pgecomfort.com. Confirm before launch.</p>
-        <a class="link" style="color:#fff" href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer">Send an inquiry <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        <p class="small" style="margin-top:var(--space-sm)">As listed on pgecomfort.com. Confirm before launch.</p>
+      </div>
+
+      <div>
+        <span class="footer-title">Questions</span>
+        <ul class="footer-list">
+          <li><a href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer">Send an inquiry</a></li>
+          <li><a href="schedule-service.html">Schedule service</a></li>
+        </ul>
       </div>
 
       <div>
         <span class="footer-title">Licence and legal</span>
-        <p><span class="plate">License No. PA018673</span></p>
+        <p>License Number: <strong style="color:var(--color-anchor-ink);font-weight:500">PA018673</strong></p>
         <ul class="footer-list">
-          <li><a href="https://pgecomfort.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy &amp; Terms <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a></li>
+          <li><a href="https://pgecomfort.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy &amp; Terms</a></li>
         </ul>
         <div class="footer-note" data-demo-only>
           Design proof of concept. Licence, certification and review details are reproduced from the current website and await client confirmation.
@@ -221,14 +217,14 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Philadelphia Gas &amp; Electric. All rights reserved.</span>
+      <span>© 2026 Philadelphia Gas &amp; Electric</span>
       <span>Philadelphia, Pennsylvania</span>
     </div>
   </div>
 </footer>
 
 <div class="dock" role="region" aria-label="Quick actions">
-  <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call now</span></a>
+  <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call now</span></a>
   <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
 </div>
 
