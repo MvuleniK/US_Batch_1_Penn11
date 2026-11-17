@@ -26,9 +26,9 @@
 
 <div class="demo-bar" data-demo-only role="note" aria-label="Prototype notice">
   <div class="container">
-    <span class="plate">Prototype</span>
+    <strong>Prototype</strong>
     <span>Demo preview. The booking calendar is an Oculeus demo, not a confirmed Philadelphia Gas &amp; Electric scheduler.</span>
-    <span class="plate mode">BOOKING_MODE = "<span data-booking-mode-text>demo</span>"</span>
+    <span class="mode">BOOKING_MODE = “<span data-booking-mode-text>demo</span>”</span>
   </div>
 </div>
 
@@ -61,131 +61,122 @@
   <div class="drawer" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
       <ul>
-        <li><a href="index.html">Home <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="services.html">Services <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="service-areas.html">Service Areas <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="reviews.html">Reviews <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
-        <li><a href="schedule-service.html" aria-current="page">Schedule / Contact <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="service-areas.html">Service Areas</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="schedule-service.html" aria-current="page">Schedule / Contact</a></li>
       </ul>
     </nav>
     <div class="drawer-actions">
       <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
-      <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
+      <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
     </div>
     <p class="drawer-meta">Prefer email? <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a></p>
   </div>
 </header>
 
 <main id="main">
-<section class="page-hero" aria-labelledby="page-title">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Schedule Service</span></nav>
-    <h1 id="page-title">Schedule Service</h1>
-    <p class="lead" style="margin:0">Choose a time in the scheduling calendar, or call the team and talk it through. Prefer to send a message first? There's a separate inquiry option below.</p>
-  </div>
-</section>
+<!-- ============ HERO: Counter, the action is the visual ============ -->
+<section class="hero" aria-labelledby="page-title">
+  <div class="container counter">
+    <div class="counter-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Schedule Service</span></nav>
+      <h1 id="page-title">Schedule Service</h1>
+      <p class="lead">Choose a time in the scheduling calendar, or call the team and talk it through.</p>
+      <div class="callcard">
+        <a class="big-phone" href="tel:2157430500" data-phone>(215) 743-0500</a>
+        <p>Or email <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a></p>
+      </div>
+    </div>
 
-<section class="section--tight" aria-label="Booking notice" style="padding-bottom:0">
-  <div class="container">
-    <!-- Demo disclosure (hidden automatically when BOOKING_MODE = "client") -->
-    <div class="callout callout--demo" data-demo-only role="note">
-      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg>
-      <div>
+    <!-- PRIMARY ACTION -->
+    <div class="book">
+      <!-- Demo disclosure (hidden automatically when BOOKING_MODE = "client") -->
+      <div class="notice" data-demo-only role="note">
         <h2>Prototype scheduling demonstration</h2>
         <p>Appointments are not confirmed with Philadelphia Gas &amp; Electric through this demo. The calendar below is an Oculeus demonstration calendar, used because no client-owned booking link has been verified. To reach the team today, call <a href="tel:2157430500" data-phone>(215) 743-0500</a>.</p>
       </div>
-    </div>
-    <!-- Client-mode copy (shown only after BOOKING_MODE = "client"); replace with client-approved text -->
-    <div class="callout" data-client-only hidden>
-      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg>
-      <div>
+      <!-- Client-mode copy (shown only after BOOKING_MODE = "client"); replace with client-approved text -->
+      <div class="notice" data-client-only hidden>
         <h2>Scheduling with Philadelphia Gas &amp; Electric</h2>
         <p>[Client-approved booking text goes here.] Your appointment is confirmed by the scheduling provider or directly by the team.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:var(--s8)" aria-label="Ways to schedule">
-  <div class="container schedule-grid">
-    <!-- PRIMARY ACTION -->
-    <div class="book-card">
-      <span class="plate">Primary action</span>
       <h2>Online appointment scheduling</h2>
       <p>Open the scheduling calendar to pick a date and time for heating, cooling or air-quality service. The booking page opens in a new tab.</p>
-      <div class="btn-row">
+      <div class="actions">
         <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Open Scheduling Calendar</span></a>
-        <button class="btn btn--outline" type="button" data-embed-btn aria-expanded="false" aria-controls="embed-shell" hidden>Preview calendar on this page</button>
+        <button class="btn btn--line" type="button" data-embed-btn aria-expanded="false" aria-controls="embed-shell" hidden>Preview calendar</button>
       </div>
       <div class="embed-shell" id="embed-shell" data-embed-shell aria-live="polite" hidden>
         <p class="embed-empty">Calendar preview not loaded.</p>
       </div>
-      <p class="muted small" style="margin:var(--s4) 0 0"><strong>Direct-link fallback:</strong> the button above always works on its own, even if scripts or embeds are blocked by your browser or network.</p>
-      <noscript><p class="muted small">JavaScript is turned off, so the on-page preview is unavailable. Use “Open Scheduling Calendar” above.</p></noscript>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="grid" style="display:grid;gap:var(--s4)">
-      <div class="contact-card">
-        <span class="muted small">Prefer to talk?</span>
-        <h2>Call the team</h2>
-        <a class="big-phone" href="tel:2157430500" data-phone>(215) 743-0500</a>
-        <p style="margin:0">Or email <a href="mailto:info@pgecomfort.com" data-email style="font-weight:500">info@pgecomfort.com</a></p>
-        <dl class="hours" style="color:var(--text-2);margin-top:var(--s2)">
-          <dt style="color:var(--text);font-weight:500">Mon to Fri</dt><dd>8:00 AM to 6:00 PM</dd>
-          <dt style="color:var(--text);font-weight:500">Saturday</dt><dd>9:00 AM to 5:00 PM</dd>
-          <dt style="color:var(--text);font-weight:500">Sunday</dt><dd>Closed</dd>
-        </dl>
-        <p class="muted small" style="margin:0">Hours as listed on pgecomfort.com. Confirm before launch.</p>
-        <a class="btn btn--ink btn--block" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a>
-      </div>
-
-      <div class="side-card">
-        <h3>Prefer to send an inquiry?</h3>
-        <p>Use the company's existing contact form to send a message or request. This is an inquiry, <strong>not</strong> a calendar booking, and it does not confirm an appointment.</p>
-        <a class="btn btn--outline" href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer"><span>Open the contact form</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a>
-      </div>
+      <small><strong>Direct-link fallback:</strong> the button above always works on its own, even if scripts or embeds are blocked by your browser or network.</small>
+      <noscript><small>JavaScript is turned off, so the on-page preview is unavailable. Use “Open Scheduling Calendar” above.</small></noscript>
     </div>
   </div>
 </section>
 
-<!-- ===== What happens next ===== -->
-<section class="section section--raised" aria-labelledby="next-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What happens next</span>
-      <h2 id="next-title">From request to confirmation</h2>
+<!-- ============ OTHER WAYS: hours and inquiry ============ -->
+<section class="section section--m band" aria-labelledby="ways-title">
+  <div class="container split split--even">
+    <div class="split-copy">
+      <h2 id="ways-title">Prefer to talk first?</h2>
+      <p class="lead">Call the team, or send a message through the company’s existing contact form.</p>
+      <dl class="hours">
+        <dt>Mon to Fri</dt><dd>8:00 AM to 6:00 PM</dd>
+        <dt>Saturday</dt><dd>9:00 AM to 5:00 PM</dd>
+        <dt>Sunday</dt><dd>Closed</dd>
+      </dl>
+      <small>Hours as listed on pgecomfort.com. Confirm before launch. Main office: 4512 Paul Street, Philadelphia, PA 19124.</small>
+      <div class="actions"><a class="btn btn--line btn--block" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call (215) 743-0500</span></a></div>
+    </div>
+    <div class="office">
+      <h3>Prefer to send an inquiry?</h3>
+      <p>Use the company’s existing contact form to send a message or request. This is an inquiry, <strong>not</strong> a calendar booking, and it does not confirm an appointment.</p>
+      <div class="actions"><a class="btn btn--line" href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer"><span>Open the contact form</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT HAPPENS NEXT ============ -->
+<section class="section section--m" aria-labelledby="next-title">
+  <div class="container rows--head">
+    <div class="head">
+      <h2 id="next-title">What happens next</h2>
       <p class="lead">Final scheduling and confirmation happen only through the linked booking provider or directly with the team.</p>
     </div>
-    <ol class="steps">
-      <li class="step"><span class="plate">1</span><h3>Choose a time or call</h3><p>Pick a slot in the scheduling calendar, or call the team to arrange a visit.</p></li>
-      <li class="step"><span class="plate">2</span><h3>Receive confirmation</h3><p>Confirmation comes from the booking provider or directly from the team. Nothing on this page confirms an appointment by itself.</p></li>
-      <li class="step"><span class="plate">3</span><h3>The team follows up</h3><p>The team confirms details with you before the visit.</p></li>
-    </ol>
-  </div>
-</section>
-
-<!-- ===== Optional form mockup ===== -->
-<section class="section" aria-labelledby="form-title">
-  <div class="container split">
     <div>
-      <span class="eyebrow">Optional</span>
-      <h2 id="form-title">Quick inquiry form preview</h2>
-      <p class="lead">A short-form layout for a future on-site inquiry. It demonstrates labels, validation and success states.</p>
-      <div class="callout callout--demo">
-        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>
+      <ol class="steps">
+        <li><div><h3>Choose a time or call</h3><p>Pick a slot in the scheduling calendar, or call the team to arrange a visit.</p></div></li>
+        <li><div><h3>Receive confirmation</h3><p>Confirmation comes from the booking provider or directly from the team. Nothing on this page confirms an appointment by itself.</p></div></li>
+        <li><div><h3>The team follows up</h3><p>The team confirms details with you before the visit.</p></div></li>
+      </ol>
+      <div class="gas" style="margin-top:var(--space-xl)">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg>
         <div>
-          <h3>Optional, backend integration required</h3>
-          <p>This form does not send anything. It cannot reach Philadelphia Gas &amp; Electric until a backend and a consent and privacy flow are connected. Use the phone, email or the existing contact form instead.</p>
+          <h3>Smell gas or suspect a leak?</h3>
+          <p>Leave the building immediately and call 911 from outside. Do not use this website to report an emergency.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <form class="form-card" data-demo-form novalidate aria-labelledby="form-title">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--s3);margin-bottom:var(--s4)">
-        <h3 style="margin:0">Send a message</h3>
-        <span class="plate">Sandbox · not connected</span>
+<!-- ============ OPTIONAL FORM PREVIEW ============ -->
+<section class="section section--m band" aria-labelledby="form-title">
+  <div class="container split">
+    <div class="split-copy">
+      <h2 id="form-title">Quick inquiry form preview</h2>
+      <p class="lead">A short-form layout for a future on-site inquiry. It demonstrates labels, validation and success states.</p>
+      <div class="notice">
+        <h3>Optional, backend integration required</h3>
+        <p>This form does not send anything. It cannot reach Philadelphia Gas &amp; Electric until a backend and a consent and privacy flow are connected. Use the phone, email or the existing contact form instead.</p>
       </div>
+    </div>
+
+    <form class="form" data-demo-form novalidate aria-labelledby="form-title">
+      <h3>Send a message</h3>
       <div class="form-grid form-grid--2">
         <div class="field">
           <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -211,40 +202,28 @@
           <span class="error" id="f-consent-err" role="alert"></span>
         </div>
       </div>
-      <div class="btn-row" style="margin-top:var(--s4)">
-        <button class="btn btn--ink" type="submit"><span>Preview submit</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-send"/></svg></button>
+      <div class="actions">
+        <button class="btn btn--line" type="submit"><span>Preview submit</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-send"/></svg></button>
+        <small>Sandbox, not connected</small>
       </div>
       <div class="form-status" data-form-status role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>
 
-<section class="section--tight" style="padding-top:0;padding-bottom:var(--s16)">
-  <div class="container">
-    <div class="callout">
-      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg>
-      <div>
-        <h3>Smell gas or suspect a leak?</h3>
-        <p>Leave the building immediately and call 911 from outside. Do not use this website to report an emergency.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
-<footer class="site-footer on-anchor">
+<footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
-        <span class="footer-mark">Philadelphia Gas &amp; Electric</span>
-        <p>Heating and cooling services for Philadelphia homes, backed by a family-owned tradition dating to 1955.</p>
-        <address class="footer-list">
-          <span style="color:var(--anchor-text)">4512 Paul Street, Philadelphia, PA 19124</span>
-          <a href="tel:2157430500" data-phone>(215) 743-0500</a>
-          <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a>
-        </address>
-      </div>
+    <div class="footer-mast">
+      <p class="mark">Philadelphia Gas &amp; Electric</p>
+      <address class="footer-list">
+        <span>4512 Paul Street, Philadelphia, PA 19124</span>
+        <a href="tel:2157430500" data-phone>(215) 743-0500</a>
+        <a href="mailto:info@pgecomfort.com" data-email>info@pgecomfort.com</a>
+      </address>
+    </div>
 
+    <div class="footer-cols">
       <div>
         <span class="footer-title">Navigate</span>
         <ul class="footer-list">
@@ -253,26 +232,33 @@
           <li><a href="service-areas.html">Service Areas</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="schedule-service.html">Schedule / Contact</a></li>
-          <li><a href="https://pgecomfort.com/" rel="noopener noreferrer" target="_blank">Current website <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a></li>
+          <li><a href="https://pgecomfort.com/" rel="noopener noreferrer" target="_blank">Current website</a></li>
         </ul>
       </div>
 
       <div>
         <span class="footer-title">Office hours</span>
-        <dl class="hours">
+        <dl class="footer-hours">
           <dt>Mon to Fri</dt><dd>8:00 AM to 6:00 PM</dd>
           <dt>Saturday</dt><dd>9:00 AM to 5:00 PM</dd>
           <dt>Sunday</dt><dd>Closed</dd>
         </dl>
-        <p class="small" style="margin-top:var(--s3)">As listed on pgecomfort.com. Confirm before launch.</p>
-        <a class="link" style="color:#fff" href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer">Send an inquiry <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        <p class="small" style="margin-top:var(--space-sm)">As listed on pgecomfort.com. Confirm before launch.</p>
+      </div>
+
+      <div>
+        <span class="footer-title">Questions</span>
+        <ul class="footer-list">
+          <li><a href="https://pgecomfort.com/contact/" data-contact target="_blank" rel="noopener noreferrer">Send an inquiry</a></li>
+          <li><a href="schedule-service.html">Schedule service</a></li>
+        </ul>
       </div>
 
       <div>
         <span class="footer-title">Licence and legal</span>
-        <p><span class="plate">License No. PA018673</span></p>
+        <p>License Number: <strong style="color:var(--color-anchor-ink);font-weight:500">PA018673</strong></p>
         <ul class="footer-list">
-          <li><a href="https://pgecomfort.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy &amp; Terms <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a></li>
+          <li><a href="https://pgecomfort.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy &amp; Terms</a></li>
         </ul>
         <div class="footer-note" data-demo-only>
           Design proof of concept. Licence, certification and review details are reproduced from the current website and await client confirmation.
@@ -281,14 +267,14 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Philadelphia Gas &amp; Electric. All rights reserved.</span>
+      <span>© 2026 Philadelphia Gas &amp; Electric</span>
       <span>Philadelphia, Pennsylvania</span>
     </div>
   </div>
 </footer>
 
 <div class="dock" role="region" aria-label="Quick actions">
-  <a class="btn btn--ink" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call now</span></a>
+  <a class="btn btn--line" href="tel:2157430500" data-phone><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call now</span></a>
   <a class="btn " href="https://cal.com/oculeus-ltd/us-gmt" data-booking target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span>Schedule Service</span></a>
 </div>
 

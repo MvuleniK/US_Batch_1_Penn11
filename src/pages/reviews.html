@@ -6,52 +6,44 @@ crumb: Reviews
 title: Reviews &amp; Trust | Family-Owned Since 1955 | Philadelphia Gas &amp; Electric
 description: 4.9/5 on Google from 215 reviews (assessment snapshot, Nov 2026). Read what Philadelphia homeowners say, and see the certifications and licence number published by Philadelphia Gas &amp; Electric.
 ---
-<section class="page-hero" aria-labelledby="page-title">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Reviews</span></nav>
-    <div class="page-hero-grid page-hero-grid--rating">
-      <div>
-        <h1 id="page-title">Trust Built Over Generations</h1>
-        <p class="lead">Backed by a family-owned tradition dating to 1955, with honest pricing, experienced technicians and a 4.9-star reputation. Here is what homeowners say, and what the company publishes about its people and credentials.</p>
-        <div class="btn-row">
-          {{sched|Schedule Service|}}
-          {{call|btn--ink|}}
-        </div>
-      </div>
-      <div class="rating-card" role="group" aria-label="Google rating snapshot">
-        <div class="big">4.9<small> / 5</small></div>
-        {{stars|5}}
-        <strong>Google rating · 215 reviews</strong>
-        <p class="muted small" style="margin:var(--s2) 0 0">Assessment snapshot, 12 Nov 2026. Live review counts may change.</p>
+<!-- ============ HERO: Stage ============ -->
+<section class="hero" aria-labelledby="page-title">
+  <div class="container stage">
+    <div class="stage-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Reviews</span></nav>
+      <h1 id="page-title">Trust Built Over Generations</h1>
+      <p class="lead">Backed by a family-owned tradition dating to 1955, with honest pricing, experienced technicians and a 4.9-star reputation.</p>
+      <div class="actions">
+        {{sched|Schedule Service|}}
+        {{call|btn--line|}}
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== Featured quote ===== -->
-<section class="section" aria-label="Featured customer quote" style="padding-bottom:0">
-  <div class="container split">
-    <figure class="pull-quote" style="margin:0">
-      <p>“They tested my system and realized the issue didn't need a replacement part, saving me the cost of parts and labor. They also took the time to explain the different parts of my boiler and showed me tests I can run myself to check things are working.”</p>
-      <figcaption><span class="plate">Featured quote on pgecomfort.com · attribution not shown there</span></figcaption>
-    </figure>
-    <figure class="photo">
-      <div class="photo-frame" style="aspect-ratio:3/2"><img src="assets/img/owner-with-customer.webp" width="1100" height="734" alt="Owner Mike explaining a thermostat setting to a customer" loading="lazy"></div>
-      <figcaption><span class="plate">Mike with a customer · photo from pgecomfort.com</span></figcaption>
+    <figure class="stage-photo">
+      <div class="frame"><img src="assets/img/owner-with-customer.webp" width="1100" height="734" alt="Owner Mike explaining a thermostat setting to a customer" fetchpriority="high"><div class="rating-badge" role="group" aria-label="Google rating snapshot"><div class="big">4.9<span> / 5</span></div>{{stars|5}}<small>Google rating, from 215 reviews. Assessment snapshot, 12 Nov 2026; live counts may change.</small></div></div>
+      <figcaption>Mike with a customer. Photo from pgecomfort.com.</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ===== Reviews ===== -->
-<section class="section" id="reviews" aria-labelledby="rev-title">
+<!-- ============ FEATURED QUOTE: Statement ============ -->
+<section class="section section--m" aria-label="Featured customer quote">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Posted on Google</span>
+    <figure class="pull">
+      <p>“They tested my system and realized the issue didn't need a replacement part, saving me the cost of parts and labor. They also took the time to explain the different parts of my boiler and showed me tests I can run myself to check things are working.”</p>
+      <figcaption>Featured quote on pgecomfort.com. Attribution not shown there.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ REVIEWS: wall ============ -->
+<section class="section band" id="reviews" aria-labelledby="rev-title">
+  <div class="container">
+    <div class="head">
       <h2 id="rev-title">What Philadelphia homeowners are saying</h2>
       <p class="lead">Word of mouth is how we've grown since 1955.</p>
     </div>
 
-    <div class="reviews-wall">
+    <div class="wall">
       <figure class="review">
         <div class="review-head"><span class="avatar" aria-hidden="true">DR</span><div><div class="review-name">Diane Robertson</div><div class="review-src">Posted on Google</div></div></div>
         {{stars|5}}
@@ -103,51 +95,29 @@ description: 4.9/5 on Google from 215 reviews (assessment snapshot, Nov 2026). R
       </figure>
     </div>
 
-    <div class="source" role="note">
-      {{icon|info}}
-      <p><strong>Source and status.</strong> Reviewer names, review text and 5-star display are reproduced from the Testimonials widget on pgecomfort.com (Trustindex, source Google), captured 13 Nov 2026. That widget showed 209 Google reviews; the assessment snapshot above recorded 215. The client should confirm permission to republish these reviews and the current count before launch.</p>
-    </div>
+    <p class="sec-note"><strong>Source and status.</strong> Reviewer names, review text and 5-star display are reproduced from the Testimonials widget on pgecomfort.com (Trustindex, source Google), captured 13 Nov 2026. That widget showed 209 Google reviews; the assessment snapshot above recorded 215. The client should confirm permission to republish these reviews and the current count before launch.</p>
   </div>
 </section>
 
-<!-- ===== Credentials ===== -->
-<section class="section section--surface" id="credentials" aria-labelledby="cred-title">
+<!-- ============ CREDENTIALS ============ -->
+<section class="section section--m" id="credentials" aria-labelledby="cred-title">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Certifications and licence</span>
+    <div class="head head--wide">
       <h2 id="cred-title">Factory Authorized. NATE Certified. OSHA Certified.</h2>
       <p class="lead">The Certified Technicians page on the current website says every service technician has been with the company for at least 15 years.</p>
     </div>
+    <table class="table">
+      <caption class="visually-hidden">Certifications and licence number as published on pgecomfort.com</caption>
+      <tbody>
+        <tr><th scope="row">NATE Certified</th><td>“Only the top HVAC companies have the skill and knowledge for North American Technician Excellence certification.”</td><td>Source: pgecomfort.com</td></tr>
+        <tr><th scope="row">Bryant Factory Authorized</th><td>Technicians trained directly by the manufacturer, “not just familiar with the equipment,” so installs and repairs are done to Bryant's own standard.</td><td>Source: pgecomfort.com</td></tr>
+        <tr><th scope="row">OSHA Certified</th><td>“We're certified by the Occupational Safety &amp; Health Administration. We use the proper safety procedures in your home.”</td><td>Source: pgecomfort.com</td></tr>
+        <tr><th scope="row">License Number</th><td class="id">PA018673</td><td>Source: pgecomfort.com footer</td></tr>
+      </tbody>
+    </table>
+    <p class="sec-note"><strong>Source and status.</strong> Statements published on the client's current website (Certified Techs page and footer, captured 13 Nov 2026). Certificates, licence status and the factory-authorization agreement have not been independently verified in this assessment. Confirm them with the client, and add supporting documents, before launch.</p>
 
-    <div class="specs">
-      <article class="spec">
-        <h3>NATE Certified</h3>
-        <p>“Only the top HVAC companies have the skill and knowledge for North American Technician Excellence certification.”</p>
-        <span class="plate">per pgecomfort.com</span>
-      </article>
-      <article class="spec">
-        <h3>Bryant Factory Authorized</h3>
-        <p>Technicians trained directly by the manufacturer, “not just familiar with the equipment,” so installs and repairs are done to Bryant's own standard.</p>
-        <span class="plate">per pgecomfort.com</span>
-      </article>
-      <article class="spec">
-        <h3>OSHA Certified</h3>
-        <p>“We're certified by the Occupational Safety &amp; Health Administration. We use the proper safety procedures in your home.”</p>
-        <span class="plate">per pgecomfort.com</span>
-      </article>
-      <article class="spec">
-        <h3>License Number</h3>
-        <p>Displayed in the footer of every page of the current website.</p>
-        <span class="plate">PA018673</span>
-      </article>
-    </div>
-
-    <div class="source" role="note">
-      {{icon|info}}
-      <p><strong>Source and status.</strong> Statements published on the client's current website (Certified Techs page and footer, captured 13 Nov 2026). Certificates, licence status and the factory-authorization agreement have not been independently verified in this assessment. Confirm them with the client, and add supporting documents, before launch.</p>
-    </div>
-
-    <div class="facts" style="margin-top:var(--s10)">
+    <div class="facts facts--2" style="margin-top:var(--space-2xl)">
       <div class="fact"><h3>Owner-led</h3><p>The technician team is led by an owner who is described as a 35-year industry veteran.</p></div>
       <div class="fact"><h3>15+ years each</h3><p>All technicians are stated to have at least 15 years of experience with the company.</p></div>
       <div class="fact"><h3>Ongoing training</h3><p>Technicians consistently undergo training, regardless of experience level.</p></div>
@@ -156,27 +126,25 @@ description: 4.9/5 on Google from 215 reviews (assessment snapshot, Nov 2026). R
   </div>
 </section>
 
-<!-- ===== Heritage ===== -->
-<section class="section" aria-labelledby="heritage-title">
+<!-- ============ HERITAGE ============ -->
+<section class="section section--m band" aria-labelledby="heritage-title">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Heritage</span>
+    <div class="head">
       <h2 id="heritage-title">Three generations of honest care</h2>
       <p class="lead">Built only from facts the company states on its current website. No additional milestones have been invented.</p>
     </div>
     <div class="heritage">
-      <article class="heritage-item"><div class="big">1955</div><h3>Family-owned since</h3><p>The company states it has been family-owned since 1955, and that word of mouth is how it has grown.</p></article>
-      <article class="heritage-item"><div class="big">3</div><h3>Generations</h3><p>For three generations, the family has believed every homeowner deserves honest care and reliable comfort.</p></article>
-      <article class="heritage-item"><div class="big">70+</div><h3>Years in business</h3><p>Today the team is led by an owner with 35 years in the industry, supported by technicians with 15+ years of hands-on experience.</p></article>
+      <div><div class="big">1955</div><h3>Family-owned since</h3><p>The company states it has been family-owned since 1955, and that word of mouth is how it has grown.</p></div>
+      <div><div class="big">3</div><h3>Generations</h3><p>For three generations, the family has believed every homeowner deserves honest care and reliable comfort.</p></div>
+      <div><div class="big">70+</div><h3>Years in business</h3><p>Today the team is led by an owner with 35 years in the industry, supported by technicians with 15+ years of hands-on experience.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="section section--raised" aria-labelledby="faq-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Questions</span>
+<!-- ============ FAQ ============ -->
+<section class="section section--m" aria-labelledby="faq-title">
+  <div class="container rows--head">
+    <div class="head">
       <h2 id="faq-title">Frequently asked questions</h2>
     </div>
     <div class="faq">
@@ -200,15 +168,16 @@ description: 4.9/5 on Google from 215 reviews (assessment snapshot, Nov 2026). R
   </div>
 </section>
 
-<section class="cta-band" aria-labelledby="cta-title">
-  <div class="container cta-grid">
-    <div>
+<!-- ============ CLOSE ============ -->
+<section class="section section--m band" aria-labelledby="cta-title">
+  <div class="container close">
+    <div class="close-copy">
       <h2 id="cta-title">Join generations of Philadelphia homeowners</h2>
       <p>Schedule service or call the team to talk about your home comfort.</p>
     </div>
-    <div class="btn-row">
+    <div class="actions">
       {{sched|Schedule Service|}}
-      {{call|btn--ink|}}
+      {{call|btn--line|}}
     </div>
   </div>
 </section>
