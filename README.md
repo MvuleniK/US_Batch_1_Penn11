@@ -19,6 +19,17 @@ python3 -m http.server 8000      # or any static server; then open http://localh
 
 The generated `.html` files are committed, so any static host works with **no build step**. `vercel.json` enables clean URLs. Deploying to `https://pgecomfort.oculeusltd.com` needs DNS authorisation (assessment §12).
 
+## Deployment
+
+Live demo: **https://pgecomfort.oculeusltd.com** (Cloudflare Worker `pgecomfort-poc` with a Workers Custom Domain on the `oculeusltd.com` zone, same pattern as the other client previews). The site sends `X-Robots-Tag: noindex` and a disallow-all `robots.txt` until the client approves launch.
+
+```bash
+node build.mjs                                   # regenerate pages if you edited src/ or config.js
+CLOUDFLARE_API_TOKEN=... node deploy/cloudflare.mjs   # redeploy (add --dry to just list files)
+```
+
+Cloudflare's zone-level Web Analytics adds its own `/cdn-cgi/rum` beacon on the live domain; this is not part of the site code. Decide whether to keep it, and add consent handling if so, before production.
+
 ## Editing
 
 Shared header, footer and mobile dock live once in `src/partials/`; page bodies live in `src/pages/`. After editing either, or `assets/js/config.js`, regenerate with:
