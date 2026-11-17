@@ -70,7 +70,6 @@ const sprite =
 const icon = (name, extra = "") =>
   `<svg class="icon${extra ? " " + extra : ""}" aria-hidden="true" focusable="false"><use href="#i-${name}"/></svg>`;
 
-const brandmark = `<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="8" fill="#132a3a"/><path d="M6 21 20 9l14 12" fill="none" stroke="#f8f6f1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15c.9 3.4 5 5 5 9.5a5 5 0 0 1-10 0c0-1.7.8-2.8 1.8-3.6.1 1.6.9 2.5 1.9 2.7-.9-3.4-.4-6.7 1.3-8.6z" fill="#fe885f"/></svg>`;
 
 /* ---- macros ---- */
 const stars = (n = 5) => `<span class="stars" role="img" aria-label="${n} out of 5 stars">${Array(n).fill(icon("star", "icon--fill")).join("")}</span>`;
@@ -78,22 +77,20 @@ const stars = (n = 5) => `<span class="stars" role="img" aria-label="${n} out of
 const macros = {
   icon: (name, extra) => icon(name, extra),
   stars: (n) => stars(Number(n) || 5),
-  brandmark: () => brandmark,
   // {{sched|Label|extra classes}}
-  sched: (label = "Schedule Service", extra = "") =>
-    `<a class="btn ${extra}" href="${CFG.BOOKING_URL}" data-booking target="_blank" rel="noopener noreferrer">${icon("calendar")}<span>${label}</span></a>`,
+  sched: (label, extra = "") =>
+    `<a class="btn ${extra}" href="${CFG.BOOKING_URL}" data-booking target="_blank" rel="noopener noreferrer">${icon("calendar")}<span>${label || "Schedule Service"}</span></a>`,
   // {{call|extra classes|label}}
-  call: (extra = "", label = `Call ${CFG.PHONE_DISPLAY}`) =>
-    `<a class="btn ${extra}" href="${CFG.PHONE_URL}" data-phone>${icon("phone")}<span>${label}</span></a>`,
+  call: (extra = "", label) =>
+    `<a class="btn ${extra}" href="${CFG.PHONE_URL}" data-phone>${icon("phone")}<span>${label || `Call ${CFG.PHONE_DISPLAY}`}</span></a>`,
   // {{mail|extra classes|label}}
-  mail: (extra = "", label = CFG.EMAIL) =>
-    `<a class="btn ${extra}" href="${CFG.EMAIL_URL}" data-email>${icon("mail")}<span>${label}</span></a>`,
+  mail: (extra = "", label) =>
+    `<a class="btn ${extra}" href="${CFG.EMAIL_URL}" data-email>${icon("mail")}<span>${label || CFG.EMAIL}</span></a>`,
   // {{contact|extra classes|label}}
-  contact: (extra = "", label = "Send an inquiry") =>
-    `<a class="btn ${extra}" href="${CFG.CONTACT_URL}" data-contact target="_blank" rel="noopener noreferrer"><span>${label}</span>${icon("external")}</a>`,
-  // {{seal|TEXT}} decorative credential seal
-  seal: (text) =>
-    `<span class="cred-seal" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#fff" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="25" fill="none" stroke="#b14c29" stroke-width="1.5" stroke-dasharray="2 3"/></svg><span>${text}</span></span>`,
+  contact: (extra = "", label) =>
+    `<a class="btn ${extra}" href="${CFG.CONTACT_URL}" data-contact target="_blank" rel="noopener noreferrer"><span>${label || "Send an inquiry"}</span>${icon("external")}</a>`,
+  // {{plate|text}} the signature data-plate tag
+  plate: (text) => `<span class="plate">${text}</span>`,
 };
 
 /* ---- truthful structured data: no AggregateRating / Review (assessment rule) ---- */
